@@ -225,7 +225,7 @@ func genMap() (extMap map[string]utls.TLSExtension) {
 			},
 		},
 		"16": &utls.ALPNExtension{
-			AlpnProtocols: []string{"h2", "http/1.1"},
+			AlpnProtocols: []string{"http/1.1", "h2"},
 		},
 		"17": &utls.GenericExtension{Id: 17}, // status_request_v2
 		"18": &utls.SCTExtension{},
@@ -242,9 +242,7 @@ func genMap() (extMap map[string]utls.TLSExtension) {
 		"43": &utls.SupportedVersionsExtension{Versions: []uint16{
 			utls.GREASE_PLACEHOLDER,
 			utls.VersionTLS13,
-			utls.VersionTLS12,
-			utls.VersionTLS11,
-			utls.VersionTLS10}},
+			utls.VersionTLS12}},
 		"44": &utls.CookieExtension{},
 		"45": &utls.PSKKeyExchangeModesExtension{Modes: []uint8{
 			utls.PskModeDHE,
